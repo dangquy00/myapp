@@ -1,0 +1,20 @@
+<div class="item <%if(ibrand == 0) {%> active <% }  %>">
+    <div class="row">
+        <% 
+            if(data)
+            for(var i = 0; i < 8;i++) {
+            if(i+ibrand < data.brandList.data.list_brands.length){ 
+                var item = data.brandList.data.list_brands[i+ibrand];
+                %>
+                <div class="thumb_logo">
+                    <a href="<%= item.brand_share_url %>" class="thumbnail">
+                        <img src="<%= item.brand_logo_url %>" alt="Image">
+                    </a>
+                </div>
+            <%
+        }}
+         ibrand += 8;
+        %>
+    </div>
+    <!--.row-->
+</div>

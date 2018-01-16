@@ -1,0 +1,21 @@
+<div class="catebox">
+    <div class="titlerow row">
+            <h1 id="spa" class="title_cate">Làm đẹp<span></span></h1>
+            <p class="viewall"><span></span><a href="#" title="Xem tất cả">Xem tất cả</a></p>
+    </div>
+    <div class="boxcontent">
+            <div class="row">
+                    <div class="col-md-3 leftcate nor">
+                            <a href="#" title="banner left"><img src="images/banner_nor.jpg" alt="left banner"></a>
+                    </div>
+                    <div class="rightcate col-md-9 col-sm-12 pad-0">
+                            <ul class="row pad-0">
+                                   <% data.lamdep.data.list_deals.map(function(obj){ %>
+										<% include deal-item %>
+						<% }) %>
+
+                            </ul>
+                    </div>
+                    </div>
+            </div>
+    </div>

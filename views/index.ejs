@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+	<p>Welcome to <%= JSON.stringify(data) %></p>
+	<% data.data.list_brands.forEach(function(item){		%>
+		<li>
+			<%= item.brand_name %>
+		</li>
+	<%	})		%>
+	<script>
+		var data = <%- JSON.stringify(data) %>;
+		console.log(<%- JSON.stringify(data.data.list_brands) %>)
+	</script>
+  </body>
+</html>
